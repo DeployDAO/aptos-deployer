@@ -1,0 +1,18 @@
+[package]
+name = "Deployer"
+version = "0.1.0"
+
+[addresses]
+Std = "0x1"
+AptosFramework = "0x1"
+Deployer = "0x5E7F8C1AF79D4963BF0BCD7FCA379370C92C00501A8555E546F24A7362250ECF"
+
+[dependencies.MoveStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/move-stdlib"
+rev = "49f08c7419b442461e47164848305fe74e846607"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = "49f08c7419b442461e47164848305fe74e846607"
