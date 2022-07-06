@@ -15,10 +15,12 @@ module Deployer::Deployer {
     public(script) fun create_resource_account_with_auth_key(
         payer: &signer,
         new_auth_key: vector<u8>
-    ) {
+    ): address {
         let (s, signer_cap) = Account::create_resource_account(payer);
         move_to(&s, SignerCapabilityStore { signer_cap });
+        let addr = Signer::address_of(&s);
         Account::rotate_authentication_key(s, new_auth_key);
+        addr
     }
 
     /// Acquires the SignerCapability of an account.
