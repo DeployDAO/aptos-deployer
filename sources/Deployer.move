@@ -3,6 +3,8 @@
 module Deployer::Deployer {
     use Std::Signer;
     use AptosFramework::Account::{Self, SignerCapability};
+    use AptosFramework::Coin;
+    use AptosFramework::TestCoin::TestCoin;
 
     /// Holds the SignerCapability.
     /// This can only ever be held by this Deployer.
@@ -19,6 +21,7 @@ module Deployer::Deployer {
         let (s, signer_cap) = Account::create_resource_account(payer);
         move_to(&s, SignerCapabilityStore { signer_cap });
         let addr = Signer::address_of(&s);
+        Coin::register<TestCoin>(&s);
         Account::rotate_authentication_key(s, new_auth_key);
         addr
     }
