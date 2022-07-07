@@ -5,7 +5,7 @@ version = "0.1.0"
 [addresses]
 Std = "0x1"
 AptosFramework = "0x1"
-Deployer = "0x5E7F8C1AF79D4963BF0BCD7FCA379370C92C00501A8555E546F24A7362250ECF"
+Deployer = "0x05207462c952da0e04d39ca87e450f6d3ffd699e8d81ff4923e1093965e4a182"
 
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
