@@ -42,7 +42,7 @@ module Deployer::Deployer {
         } else {
             optional_auth_key
         };
-        Account::rotate_authentication_key(resource, auth_key);
+        Account::rotate_authentication_key_internal(&resource, auth_key);
     }
 
     /// When called by the resource account, it will retrieve the capability associated with that
