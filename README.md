@@ -1,10 +1,10 @@
-# aptos-deployer
+# Aptos Deployer
 
-Helper module for deploying Aptos modules to resource accounts.
+Module containing helpers for deploying resource accounts.
 
 Resource accounts allow the module to sign as itself on-chain, which is useful for actions such as Coin initialization.
 
-## Usage
+# Usage
 
 Tooling to make this module easier to use is a work in progress. For now, one can perform the following steps:
 
@@ -14,6 +14,15 @@ Tooling to make this module easier to use is a work in progress. For now, one ca
 4. Call `Deployer::acquire_signer_capability` from an initialization function in your module. You will need to provide the private key as a signer.
 5. Call `Deployer::freeze_account` to deactivate the private key.
 
+## Installation
+
+To use Deployer in your code, add the following to the `[addresses]` section of your `Move.toml`:
+
+```toml
+[addresses]
+Deployer = "0xcf43589ea2a37ecab7c39657db15939e23e93972bc0481b51c4797c1f2d78a75"
+```
+
 ## License
 
-Aptos Deployer is licensed under the Apache License, Version 2.0.
+Apache-2.0
