@@ -55,6 +55,6 @@ module Deployer::Deployer {
         let zero_auth_key = x"0000000000000000000000000000000000000000000000000000000000000000";
         let resource = Account::create_signer_with_capability(&resource_signer_cap);
         Account::rotate_authentication_key_internal(&resource, zero_auth_key);
-       resource_signer_cap
+        resource_signer_cap
     }
 }
