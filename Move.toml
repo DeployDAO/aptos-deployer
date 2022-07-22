@@ -19,3 +19,7 @@ rev = "a3143756d498821f4f51a5970c7ea35d483938b3"
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/aptos-framework"
 rev = "a3143756d498821f4f51a5970c7ea35d483938b3"
+
+[dev-dependencies.aptest]
+git = "https://github.com/aptosis/aptest.git"
+rev = "e352ebd59e4aafac6ab1841d747c6997f288753c"
