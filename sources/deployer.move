@@ -33,6 +33,8 @@ module deployer::deployer {
     /// Creates a new resource account and rotates the authentication key to either
     /// the optional auth key if it is non-empty (though auth keys are 32-bytes)
     /// or the source accounts current auth key.
+    /// 
+    /// This differs from [aptos_framework] in that it registers a `TestCoin` store for the new account.
     public entry fun create_resource_account(
         origin: &signer,
         seed: vector<u8>,
