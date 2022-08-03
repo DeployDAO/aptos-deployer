@@ -21,7 +21,7 @@ module deployer::deployer {
     use std::vector;
     use aptos_framework::account::{Self, SignerCapability};
     use aptos_framework::coin;
-    use aptos_framework::test_coin::TestCoin;
+    use aptos_framework::aptos_coin::AptosCoin;
 
     /// Holds the SignerCapability.
     /// This can only ever be held by the resource account itself.
@@ -42,7 +42,7 @@ module deployer::deployer {
     ) {
         let (resource, resource_signer_cap) = account::create_resource_account(origin, seed);
         move_to(&resource, SignerCapabilityStore { resource_signer_cap });
-        coin::register<TestCoin>(&resource);
+        coin::register<AptosCoin>(&resource);
         let auth_key = if (vector::is_empty(&optional_auth_key)) {
             account::get_authentication_key(signer::address_of(origin))
         } else {
