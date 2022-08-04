@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    shell: nix shell .#af-cli --command bash {0}
+    shell: nix shell .#aptos --command bash {0}
 
 env:
   TERM: xterm-color
