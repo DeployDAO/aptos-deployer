@@ -14,10 +14,9 @@ this module internally. Please read the documentation for that crate for more in
 One can perform the following steps:
 
 1. Create a new public/private keypair via `aptos key generate`.
-2. Call `deployer::create_resource_account_with_auth_key` with the generated public key.
+2. Call `deployer::create_resource_account` with the generated public key.
 3. Upload your module via `aptos move publish`.
 4. Call `deployer::acquire_signer_capability` from an initialization function in your module. You will need to provide the private key as a signer.
-5. Call `deployer::freeze_account` to deactivate the private key.
 
 ## Installation
 
