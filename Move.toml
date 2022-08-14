@@ -4,22 +4,19 @@ version = "0.1.0"
 authors = ["Ian Macalinao <ian@deploydao.com>"]
 license = "Apache-2.0"
 
-[readme]
-title = "Aptos Deployer"
-
 [addresses]
 deployer = "0x1245d0cf838606de0efd8bdfcc80b80cb4198f589b14ecac66ccc83035102c00"
 
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/move-stdlib"
-rev = "5c7db667c915f18cb65e12be9a87310eb90e3cfe"
+rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/aptos-framework"
-rev = "5c7db667c915f18cb65e12be9a87310eb90e3cfe"
+rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
 
 [dev-dependencies.aptest]
 git = "https://github.com/aptosis/aptest.git"
-rev = "57538a9d15f8a5aa5a8b718b6fec8f8d1e602acd"
+rev = "abf723cb4b2c427542f78536c8d3289df2d181ca"
