@@ -10,13 +10,13 @@ deployer = "0x1245d0cf838606de0efd8bdfcc80b80cb4198f589b14ecac66ccc83035102c00"
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/move-stdlib"
-rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
+rev = "6b41e0e01cd8bf57c0497c69af4f5ea083aa16c3"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/aptos-framework"
-rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
+rev = "6b41e0e01cd8bf57c0497c69af4f5ea083aa16c3"
 
 [dev-dependencies.aptest]
 git = "https://github.com/aptosis/aptest.git"
-rev = "abf723cb4b2c427542f78536c8d3289df2d181ca"
+rev = "dfefd36b61e7518e0d67203e3a8dfbf76ea12fb8"
