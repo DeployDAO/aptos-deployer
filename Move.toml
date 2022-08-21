@@ -19,4 +19,4 @@ rev = "a026097e1873d6ce2a264c4e162e910bbf5788f3"
 
 [dev-dependencies.aptest]
 git = "https://github.com/aptosis/aptest.git"
-rev = "81776541b617dd20dd4b4070d3a8710e08e05d4f"
+rev = "e6a39c555f07bdeaa0350ab5f0130a2393b38e2d"
