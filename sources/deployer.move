@@ -63,4 +63,12 @@ module deployer::deployer {
         account::rotate_authentication_key_internal(&resource, zero_auth_key);
         resource_signer_cap
     }
+
+    #[test_only]
+    /// Creates the address for a resource account.
+    public fun create_resource_account_address(origin: address, seed: vector<u8>): address {
+        let bytes = std::bcs::to_bytes(&origin);
+        vector::append(&mut bytes, seed);
+        aptos_framework::account::create_address_for_test(std::hash::sha3_256(bytes))
+    }
 }
