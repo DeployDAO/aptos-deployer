@@ -4,7 +4,7 @@ module deployer::deployer {
     use aptos_framework::account::{Self, SignerCapability};
 
     /// Holds the SignerCapability.
-    /// This can only ever be held by the resource account itself.
+    /// This can only ever be held by the deployer of the package.
     struct SignerCapabilityStore has key, drop {
         /// The SignerCapability of the resource.
         resource_signer_cap: SignerCapability
