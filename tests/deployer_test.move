@@ -21,7 +21,7 @@ module deployer::deployer_test {
     ) {
         aptos_account::create_account(signer::address_of(&origin));
         deployer::publish_package_txn(&origin, b"test", FAKE_PACKAGE, vector::empty());
-        let resource_signer_cap = deployer::retrieve_resource_account_cap(&derived);
+        let resource_signer_cap = deployer::retrieve_resource_account_cap(&origin);
         let resource = account::create_signer_with_capability(&resource_signer_cap);
         check::borrow_eq(&derived, &resource);
     }

@@ -5,7 +5,7 @@ authors = ["Ian Macalinao <ian@deploydao.com>"]
 license = "Apache-2.0"
 
 [addresses]
-deployer = "0x1245d0cf838606de0efd8bdfcc80b80cb4198f589b14ecac66ccc83035102c00"
+deployer = "0x35bf5e9ec8b7a342900f55e4cc08ee1d7d90c7ae7daeaf19e298f11c957aba07"
 
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"

@@ -18,15 +18,16 @@ module deployer::deployer {
     ) {
         let (resource, resource_signer_cap) = account::create_resource_account(deployer, seed);
         aptos_framework::code::publish_package_txn(&resource, metadata_serialized, code);
-        move_to(&resource, SignerCapabilityStore { resource_signer_cap });
+        move_to(deployer, SignerCapabilityStore { resource_signer_cap });
     }
 
     /// Retrieves the resource account signer capability once, allowing the package to be able
     /// to sign as itself.
+    /// Only the deployer can call this.
     public fun retrieve_resource_account_cap(
-        resource: &signer
+        deployer: &signer
     ): SignerCapability acquires SignerCapabilityStore {
-        let SignerCapabilityStore { resource_signer_cap } = move_from<SignerCapabilityStore>(signer::address_of(resource));
+        let SignerCapabilityStore { resource_signer_cap } = move_from<SignerCapabilityStore>(signer::address_of(deployer));
         resource_signer_cap
     }
 
